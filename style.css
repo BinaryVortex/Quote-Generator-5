@@ -1,0 +1,123 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('QuoteGenerate.jpg'); /* Replace with your image path */
+    background-size: 200% 200%;
+    animation: moveBackground 30s linear infinite;
+    color: #ffffff; /* Default text color */
+}
+
+/* Keyframes for Background Movement */
+@keyframes moveBackground {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+/* Container with Glassmorphism Effect */
+.container {
+    background: rgba(0, 0, 0, 0.6); /* More opaque black background for better contrast */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    padding: 40px; /* Increased padding for better spacing */
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Adjust Spacing for Content */
+.qofday {
+    font-size: 1.8em; /* Slightly larger font */
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #ffffff;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6); /* Enhanced shadow */
+}
+
+.quote {
+    background-color: rgba(255, 255, 255, 0.3); /* Slightly more opaque */
+    padding: 30px; /* Increased padding */
+    margin-bottom: 25px; /* More margin */
+    border-radius: 12px;
+    color: #ffffff;
+    border-left: 4px solid #e42c0c;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Deeper shadow */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    font-size: 1.2em;
+}
+
+/* Loader */
+.loader {
+    border: 6px solid rgba(255, 255, 255, 0.2);
+    border-top: 6px solid #ffffff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+    display: none; /* Initially hidden */
+}
+
+/* Loader Animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Button Styles */
+.gen {
+    font-size: 20px; /* Larger font */
+    padding: 14px 28px; /* Increased padding */
+    border: none;
+    border-radius: 30px;
+    background-color: #e42c0c;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 12px rgba(228, 44, 12, 0.5); /* Enhanced shadow */
+}
+
+.gen:hover {
+    background-color: #c62a1a;
+    transform: scale(1.08); /* Larger hover effect */
+}
+
+.gen:active {
+    background-color: #a51917;
+}
+
+.gen:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 25px;
+    }
+
+    .qofday {
+        font-size: 1.5em;
+    }
+
+    .quote {
+        font-size: 1.1em;
+    }
+
+    .gen {
+        font-size: 18px;
+        padding: 12px 24px;
+    }
+}
